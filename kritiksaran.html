@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="dicoding:email" content="budiono1995@gmail.com">
+
+    <title>Asian Games 18th 2018 | Kritik dan Saran</title>
+	
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+<script>
+		function kritiksaran(){
+			var nama = document.getElementById('nama');
+			var email = document.getElementById('email');
+			var subject = document.getElementById('subject');
+			var isi = document.getElementById('isi');
+			
+			if (harusDiisi(nama, "Nama belum diisi")){
+				if(harusDiisi(email,"Email belum diisi")){
+					if(harusDiisi(subject,"Subject belum diisi")){
+						if(harusDiisi(isi,"Isi belum diisi")){
+						return true;
+						};
+					};
+				};
+			};
+			return false;
+		}
+		
+		function harusDiisi(att,msg){
+			if(att.value.length == 0){
+				alert(msg);
+				att.focus();
+				return false;
+			}
+			return true;
+		}
+	</script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                    <img src = "asiangames2018.png" height = "100px">
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+					<li><a href="index.html" style="color:White;">Home</a></li>
+                    <li><a href="livestreaming.html" style="color:White;">Live Streaming</a></li>
+                    <li class="dropdown"><a data-toggle="dropdown" href="#">Pertandingan Hari Ini</a>
+						<ul class="dropdown-menu" style="background-color:white">
+                        <li><a href="jadwal.html" style="color:Black;">Jadwal Pertandingan</a></li>
+						<li><a href="hasil.html" style="color:Black;">Hasil Pertandingan</a></li>
+						<li><a href="analisis.html" style="color:Black;">Analisis Pertandingan</a></li></ul>
+					</li>
+					<li class="dropdown"><a data-toggle="dropdown" href="#">Lain-lain</a>
+						<ul class="dropdown-menu" style="background-color:white">
+						<li><a href="dokumentasi.html" style="color:Black;">Dokumentasi</a></li>
+						<li><a href="info.html" style="color:Black;">Info Pertandingan</a></li>
+						<li><a href="kritiksaran.html" style="color:Black;">Kritik dan Saran</a></li></ul>
+					</li>
+					<li><a href="medali.html" style="color:White;">Medali Sementara</a></li>
+					<li><a href="klasemen.html" style="color:White;">Klasemen Sepakbola</a></li>
+				</ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1>Kritik dan Saran</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+	<div class="container" id="form">
+		<form id = "kritiksaran" onsubmit = "return kritiksaran()" action = "terimakasih.html" method = "post">
+			<div class="form-group">
+				<div class="col-sm-1 col-sm-1" for="nama">Nama</div>
+				<div class="col-sm-8">
+					<input type="text" class ="form-control" name = "nama" required>
+				</div>
+			</div>
+			<br><br><br>
+			<div class="form-group">
+				<div class="col-sm-1 col-sm-1" for="email">Email</div>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" name="email" required>
+				</div>
+			</div>
+			<br><br>
+			<div class="form-group">
+				<div class="col-sm-1 col-sm-1" for="subject">Subject</div>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" name="subject" required>
+				</div>
+			</div>
+			<br><br>
+			<div class="form-group">
+				<div class="col-sm-1 col-sm-1" for="isi">Isi</div>
+				<div class="col-sm-8">
+					<textarea type="text" class="form-control" rows="5" name="isi" required></textarea>
+				</div>
+			</div><br>
+			<div>
+				<input type = "submit" name = "Kirim"/>
+				<input type = "submit" value = "Cancel"/>
+			</div>
+		</form>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; 2018 18th Asian Games Jakarta - Palembang</p>
+        </div>
+    </footer>
+
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script><script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+	<script src="js/grayscale.min.js"></script>
+
+</body>
+
+</html>
