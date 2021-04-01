@@ -65,9 +65,9 @@ var support = {};
 
 
 var
-	version = "1.12.4",
+	version = "3.5.0",
 
-	// Define a local copy of jQuery
+    	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
 
 		// The jQuery object is actually just the init constructor 'enhanced'
